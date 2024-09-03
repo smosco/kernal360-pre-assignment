@@ -1,20 +1,15 @@
 import { Wrapper, Title, OrderListContainer } from './styles';
 import Order from './Order';
+import OrdersData from '../../data/orders.json';
 
 const OrderList = () => {
   return (
     <Wrapper>
       <Title>Order List</Title>
       <OrderListContainer>
-        <Order />
-        <Order />
-        <Order />
-        <Order />
-        <Order />
-        <Order />
-        <Order />
-        <Order />
-        <Order />
+        {OrdersData.map((order) => {
+          return <Order order={order} />;
+        })}
       </OrderListContainer>
     </Wrapper>
   );

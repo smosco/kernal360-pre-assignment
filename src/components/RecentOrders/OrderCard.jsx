@@ -1,14 +1,15 @@
 import UserProfile from '../../common/UserProfile/UserProfile';
 import { Card, OrderDetail } from './styles';
 
-const OrderCard = () => {
+const OrderCard = ({ order }) => {
+  const { no, orderedAt, user } = order;
   return (
     <Card>
       <OrderDetail>
-        <h3>Order #351</h3>
-        <p>05 Feb 2023,08:23 PM</p>
+        <h3>Order #{no}</h3>
+        <p>{orderedAt}</p>
       </OrderDetail>
-      <UserProfile />
+      <UserProfile user={user} />
     </Card>
   );
 };

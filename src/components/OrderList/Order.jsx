@@ -9,25 +9,28 @@ import {
 } from './styles';
 import OrderItem from './OrderItem';
 
-const Order = () => {
+const Order = ({ order }) => {
+  const { no, items, orderedAt, status, user } = order;
+
   return (
     <OrderItemContainer>
       <Top>
         <OrderDetail>
-          <h3>Order #349</h3>
-          <p>05 Feb 2023, 08:28PM</p>
+          <h3>Order #${no}</h3>
+          <p>{orderedAt}</p>
         </OrderDetail>
-        <UserProfile />
+        <UserProfile user={user} />
       </Top>
-      <OrderItem />
-      <OrderItem />
+      {items.map((item) => {
+        return <OrderItem item={item} />;
+      })}
       <Bottom>
-        <span>X2 items</span>
+        <span>X{items.length} items</span>
         <ButtonContainer>
-          <button className='reject'>
+          <button className={status}>
             <Icon name='X' color='#DB79A9' />
           </button>
-          <button className='completed'>
+          <button className={status}>
             <Icon name='Check' color='#87B6A1' />
           </button>
         </ButtonContainer>

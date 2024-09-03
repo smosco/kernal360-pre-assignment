@@ -95,6 +95,7 @@ export const ItemImg = styled.img`
 
 export const ItemDetail = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 0.5rem;
 
@@ -104,7 +105,7 @@ export const ItemDetail = styled.div`
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #797b7e;
   }
 `;

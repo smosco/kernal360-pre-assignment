@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
 `;
 
 export const Title = styled.h1`
@@ -12,6 +11,7 @@ export const Title = styled.h1`
 `;
 
 export const OrdersContainer = styled.ul`
+  margin-top: 1.2rem;
   display: flex;
   gap: 2rem;
   overflow-x: scroll;
@@ -19,8 +19,9 @@ export const OrdersContainer = styled.ul`
 
 export const Card = styled.li`
   display: flex;
-  gap: 7rem;
-  flex-shrink: 0;
+  justify-content: space-between;
+  width: 34rem;
+  /* flex-shrink: 0; */
   background-color: white;
   padding: 1.8rem;
   border-radius: 0.8rem;
@@ -33,12 +34,12 @@ export const OrderDetail = styled.div`
   gap: 0.5rem;
 
   h3 {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.4rem;
+    font-weight: 500;
   }
 
   p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #797b7e;
   }
 `;

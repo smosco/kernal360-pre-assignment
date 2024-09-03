@@ -10,6 +10,11 @@ const OrderList = () => {
         <Order />
         <Order />
         <Order />
+        <Order />
+        <Order />
+        <Order />
+        <Order />
+        <Order />
       </OrderListContainer>
     </Wrapper>
   );

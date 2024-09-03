@@ -9,6 +9,7 @@ import {
 } from './styles';
 import OrderItem from './OrderItem';
 import { formatDate } from '../../lib/formatDate';
+import OrderHeader from '../../common/OrderHeader';
 
 const Order = ({ order }) => {
   const { no, items, orderedAt, status, user } = order;
@@ -25,13 +26,7 @@ const Order = ({ order }) => {
 
   return (
     <OrderItemContainer>
-      <Top>
-        <OrderDetail>
-          <h3>Order #${no}</h3>
-          <p>{formatDate(orderedAt)}</p>
-        </OrderDetail>
-        <UserProfile user={user} />
-      </Top>
+      <OrderHeader no={no} orderedAt={orderedAt} user={user} />
       {items.map((item) => {
         return <OrderItem item={item} />;
       })}

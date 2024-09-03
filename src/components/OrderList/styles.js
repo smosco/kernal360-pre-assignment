@@ -28,26 +28,6 @@ export const OrderItemContainer = styled.li`
   border-radius: 1rem;
 `;
 
-export const Top = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const OrderDetail = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  h3 {
-    font-size: 1.6rem;
-    font-weight: 500;
-  }
-
-  p {
-    font-size: 1.4rem;
-    color: #797b7e;
-  }
-`;
-
 export const Bottom = styled.div`
   display: flex;
   justify-content: space-between;

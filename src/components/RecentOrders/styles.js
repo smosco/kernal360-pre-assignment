@@ -18,28 +18,10 @@ export const OrdersContainer = styled.ul`
 `;
 
 export const Card = styled.li`
-  display: flex;
-  justify-content: space-between;
   width: 34rem;
   flex-shrink: 0;
   background-color: white;
   padding: 1.8rem;
   border-radius: 0.8rem;
   border: 1px solid #8a8a8a;
-`;
-
-export const OrderDetail = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-
-  h3 {
-    font-size: 2.4rem;
-    font-weight: 500;
-  }
-
-  p {
-    font-size: 1.6rem;
-    color: #797b7e;
-  }
 `;

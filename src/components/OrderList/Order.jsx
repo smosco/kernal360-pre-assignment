@@ -8,6 +8,7 @@ import {
   ButtonContainer,
 } from './styles';
 import OrderItem from './OrderItem';
+import { formatDate } from '../../lib/formatDate';
 
 const Order = ({ order }) => {
   const { no, items, orderedAt, status, user } = order;
@@ -17,7 +18,7 @@ const Order = ({ order }) => {
       <Top>
         <OrderDetail>
           <h3>Order #${no}</h3>
-          <p>{orderedAt}</p>
+          <p>{formatDate(orderedAt)}</p>
         </OrderDetail>
         <UserProfile user={user} />
       </Top>

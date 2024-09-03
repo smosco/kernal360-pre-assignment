@@ -1,5 +1,6 @@
 import UserProfile from '../../common/UserProfile/UserProfile';
 import { Card, OrderDetail } from './styles';
+import { formatDate } from '../../lib/formatDate';
 
 const OrderCard = ({ order }) => {
   const { no, orderedAt, user } = order;
@@ -7,7 +8,7 @@ const OrderCard = ({ order }) => {
     <Card>
       <OrderDetail>
         <h3>Order #{no}</h3>
-        <p>{orderedAt}</p>
+        <p>{formatDate(orderedAt)}</p>
       </OrderDetail>
       <UserProfile user={user} />
     </Card>

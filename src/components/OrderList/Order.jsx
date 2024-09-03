@@ -1,14 +1,6 @@
-import UserProfile from '../../common/UserProfile/UserProfile';
 import Icon from '../../common/Icon';
-import {
-  OrderItemContainer,
-  Top,
-  OrderDetail,
-  Bottom,
-  ButtonContainer,
-} from './styles';
+import { OrderItemContainer, Bottom, ButtonContainer } from './styles';
 import OrderItem from './OrderItem';
-import { formatDate } from '../../lib/formatDate';
 import OrderHeader from '../../common/OrderHeader';
 
 const Order = ({ order }) => {
@@ -28,7 +20,15 @@ const Order = ({ order }) => {
     <OrderItemContainer>
       <OrderHeader no={no} orderedAt={orderedAt} user={user} />
       {items.map((item) => {
-        return <OrderItem item={item} />;
+        // 할인 가격, 세일 상태 등 미래에 추가될 데이터를 쉽게 반영할 수 있도록 유연한 구조
+        // pricing 객체 생성
+        const pricing = {
+          price: item.price,
+          discountPrice: item.discountPrice || null,
+          isOnSale: item.isOnSale || false,
+        };
+
+        return <OrderItem item={{ ...item, pricing }} />;
       })}
       <Bottom>
         <span>X{items.length} items</span>

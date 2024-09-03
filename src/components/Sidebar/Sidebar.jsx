@@ -1,4 +1,4 @@
-import { SidebarContainer, SidebarItemList, Logo } from './styles';
+import { SidebarContainer, Wrapper, SidebarItemList, Logo } from './styles';
 import SidebarItem from './SidebarItem';
 
 const sideMenus = [
@@ -37,19 +37,21 @@ const sideMenus = [
 const Sidebar = () => {
   return (
     <SidebarContainer>
-      <Logo>KernelOrder</Logo>
-      <SidebarItemList>
-        {sideMenus.map((item, idx) => {
-          return (
-            <SidebarItem
-              key={idx}
-              to={item.to}
-              label={item.label}
-              icon={item.icon}
-            />
-          );
-        })}
-      </SidebarItemList>
+      <Wrapper>
+        <Logo>KernelOrder</Logo>
+        <SidebarItemList>
+          {sideMenus.map((item, idx) => {
+            return (
+              <SidebarItem
+                key={idx}
+                to={item.to}
+                label={item.label}
+                icon={item.icon}
+              />
+            );
+          })}
+        </SidebarItemList>
+      </Wrapper>
       <SidebarItem label='LOGOUT' icon='LogOut' />
     </SidebarContainer>
   );

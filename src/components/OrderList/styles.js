@@ -24,7 +24,7 @@ export const OrderItemContainer = styled.li`
   width: 34rem;
   padding: 2rem;
   background-color: white;
-  border: 1px solid #797b7e;
+  border: 1px solid #8a8a8a;
   border-radius: 1rem;
 `;
 

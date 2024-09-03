@@ -4,9 +4,15 @@ import { NavLink } from 'react-router-dom';
 export const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
   padding: 3.6rem 2rem;
   height: 100vh;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const Logo = styled.div`
@@ -16,7 +22,7 @@ export const Logo = styled.div`
 `;
 
 export const SidebarItemList = styled.ul`
-  margin-top: 8.2rem;
+  margin-top: 8rem;
   display: flex;
   flex-direction: column;
 `;

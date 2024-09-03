@@ -25,7 +25,7 @@ export const Card = styled.li`
   background-color: white;
   padding: 1.8rem;
   border-radius: 0.8rem;
-  border: 1px solid #7a7a7a;
+  border: 1px solid #8a8a8a;
 `;
 
 export const OrderDetail = styled.div`

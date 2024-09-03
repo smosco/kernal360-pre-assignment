@@ -13,7 +13,15 @@ import { formatDate } from '../../lib/formatDate';
 const Order = ({ order }) => {
   const { no, items, orderedAt, status, user } = order;
 
-  console.log(status);
+  const renderButton = (buttonStatus, isConfirmed = false) => (
+    <button className={buttonStatus}>
+      <Icon
+        name={buttonStatus === 'completed' ? 'Check' : 'X'}
+        color={buttonStatus === 'completed' ? '#87B6A1' : '#DB79A9'}
+      />
+      {isConfirmed && buttonStatus.toUpperCase()}
+    </button>
+  );
 
   return (
     <OrderItemContainer>
@@ -31,22 +39,14 @@ const Order = ({ order }) => {
         <span>X{items.length} items</span>
         <ButtonContainer>
           {status === 'waiting' ? (
+            // 주문 요청 확인 중
             <>
-              <button className='waiting rejected'>
-                <Icon name='X' color='#DB79A9' />
-              </button>
-              <button className='waiting completed'>
-                <Icon name='Check' color='#87B6A1' />
-              </button>
+              {renderButton('rejected')}
+              {renderButton('completed')}
             </>
           ) : (
-            <button className={status}>
-              <Icon
-                name={status === 'completed' ? 'Check' : 'X'}
-                color={status === 'completed' ? '#87B6A1' : '#DB79A9'}
-              />
-              {status.toUpperCase()}
-            </button>
+            // 주문 요청 확인 후 수락, 거절 상태
+            renderButton(status, true)
           )}
         </ButtonContainer>
       </Bottom>

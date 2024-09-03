@@ -39,6 +39,9 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.6;
   }
 
+  ::-webkit-scrollbar {
+  display: none; /* 웹킷 기반 브라우저에서 스크롤바 숨기기 */
+}
   /* 기본적으로 모든 이미지는 컨테이너에 맞게 반응형으로 설정 */
   img {
     max-width: 100%;

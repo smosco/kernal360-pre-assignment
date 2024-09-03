@@ -63,17 +63,30 @@ export const ButtonContainer = styled.div`
   gap: 2rem;
 
   button {
-    width: 5rem;
-    height: 5rem;
+    padding: 1.2rem;
     border-radius: 1rem;
     background-color: white;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    width: fit-content; /* 공통적으로 적용되는 스타일 */
+    border: 1px solid transparent; /* 기본 상태에서 투명하게 처리 */
 
-    &.completed {
-      border: 1px solid #87b6a1;
+    &.completed,
+    &.waiting.completed {
+      /* completed 클래스에 대한 스타일 */
+      border-color: #87b6a1;
+      color: #87b6a1;
     }
-    &.reject {
-      border: 1px solid #db79a9;
+
+    &.rejected,
+    &.waiting.rejected {
+      /* rejected 클래스에 대한 스타일 */
+      border-color: #db79a9;
+      color: #db79a9;
     }
   }
 `;

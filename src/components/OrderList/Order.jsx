@@ -13,6 +13,8 @@ import { formatDate } from '../../lib/formatDate';
 const Order = ({ order }) => {
   const { no, items, orderedAt, status, user } = order;
 
+  console.log(status);
+
   return (
     <OrderItemContainer>
       <Top>
@@ -28,12 +30,24 @@ const Order = ({ order }) => {
       <Bottom>
         <span>X{items.length} items</span>
         <ButtonContainer>
-          <button className={status}>
-            <Icon name='X' color='#DB79A9' />
-          </button>
-          <button className={status}>
-            <Icon name='Check' color='#87B6A1' />
-          </button>
+          {status === 'waiting' ? (
+            <>
+              <button className='waiting rejected'>
+                <Icon name='X' color='#DB79A9' />
+              </button>
+              <button className='waiting completed'>
+                <Icon name='Check' color='#87B6A1' />
+              </button>
+            </>
+          ) : (
+            <button className={status}>
+              <Icon
+                name={status === 'completed' ? 'Check' : 'X'}
+                color={status === 'completed' ? '#87B6A1' : '#DB79A9'}
+              />
+              {status.toUpperCase()}
+            </button>
+          )}
         </ButtonContainer>
       </Bottom>
     </OrderItemContainer>

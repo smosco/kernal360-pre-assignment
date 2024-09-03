@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const DashboardContainer = styled.div`
   display: flex;
+  height: 100vh;
 `;
 
 export const ContentContainer = styled.div`
@@ -11,4 +12,5 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.6rem;
+  overflow-y: auto;
 `;

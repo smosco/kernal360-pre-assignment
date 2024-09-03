@@ -6,6 +6,7 @@ export const SidebarContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 3.6rem 2rem;
+  height: 100vh;
 `;
 
 export const Logo = styled.div`

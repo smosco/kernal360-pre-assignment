@@ -21,7 +21,7 @@ export const Card = styled.li`
   display: flex;
   justify-content: space-between;
   width: 34rem;
-  /* flex-shrink: 0; */
+  flex-shrink: 0;
   background-color: white;
   padding: 1.8rem;
   border-radius: 0.8rem;

@@ -12,8 +12,8 @@ export const Title = styled.h1`
 
 export const OrderListContainer = styled.ul`
   margin-top: 1.6rem;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 34rem); /* 각 열의 너비를 34rem로 고정 */
   gap: 3rem;
 `;
 

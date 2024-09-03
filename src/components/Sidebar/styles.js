@@ -34,7 +34,7 @@ export const MenuLink = styled(NavLink)`
   gap: 3rem;
   padding: 1.4rem;
   border-radius: 0.8rem;
-  /* border: 1px solid #ff8144; */
+  border: ${(props) => props.isSelected && '1px solid #ff8144'};
   cursor: pointer;
 `;
 

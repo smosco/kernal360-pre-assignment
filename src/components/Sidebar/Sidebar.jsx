@@ -1,5 +1,6 @@
 import { SidebarContainer, Wrapper, SidebarItemList, Logo } from './styles';
 import SidebarItem from './SidebarItem';
+import { useState } from 'react';
 
 const sideMenus = [
   {
@@ -35,6 +36,10 @@ const sideMenus = [
 ];
 
 const Sidebar = () => {
+  const [selected, setSelected] = useState('ORDER HISTORY');
+  const handleClick = (label) => {
+    setSelected(label);
+  };
   return (
     <SidebarContainer>
       <Wrapper>
@@ -47,6 +52,8 @@ const Sidebar = () => {
                 to={item.to}
                 label={item.label}
                 icon={item.icon}
+                isSelected={selected === item.label ? true : false}
+                onClick={handleClick}
               />
             );
           })}

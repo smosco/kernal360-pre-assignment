@@ -4,7 +4,7 @@ import SidebarItem from './SidebarItem';
 const sideMenus = [
   {
     to: '/',
-    label: 'Home',
+    label: 'HOME',
     icon: 'House',
   },
   {
@@ -50,6 +50,7 @@ const Sidebar = () => {
           );
         })}
       </SidebarItemList>
+      <SidebarItem label='LOGOUT' icon='LogOut' />
     </SidebarContainer>
   );
 };

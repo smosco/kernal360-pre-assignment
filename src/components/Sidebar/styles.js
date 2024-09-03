@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const SidebarContainer = styled.div`
   display: flex;
@@ -15,17 +16,18 @@ export const Logo = styled.div`
 
 export const SidebarItemList = styled.ul`
   margin-top: 8.2rem;
-  width: 100%;
   display: flex;
   flex-direction: column;
 `;
 
-export const ItemContainer = styled.li`
+export const MenuLink = styled(NavLink)`
+  width: 24rem;
   display: flex;
   align-items: center;
   gap: 3rem;
-  padding: 2rem 1.4rem;
+  padding: 1.4rem;
   border-radius: 0.8rem;
+  /* border: 1px solid #ff8144; */
   cursor: pointer;
 `;
 

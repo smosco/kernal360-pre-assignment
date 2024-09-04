@@ -9,11 +9,11 @@ const OrderHeaderContainer = styled.div`
 
 const OrderDetail = styled.div`
   h3 {
-    font-size: ${(props) => props.titleFontSize || '16px'};
+    font-size: ${(props) => props.$titleFontSize || '16px'};
     font-weight: 500;
   }
   p {
-    font-size: ${(props) => props.dateFontSize || '14px'};
+    font-size: ${(props) => props.$dateFontSize || '14px'};
     color: #797b7e;
   }
 `;

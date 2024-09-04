@@ -9,8 +9,8 @@ const OrderCard = ({ order }) => {
         no={no}
         orderedAt={orderedAt}
         user={user}
-        $titleFontSize='24px'
-        $dateFontSize='16px'
+        titleFontSize='24px'
+        dateFontSize='16px'
       />
     </Card>
   );

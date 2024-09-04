@@ -19,7 +19,7 @@ const Order = ({ order }) => {
   return (
     <OrderItemContainer>
       <OrderHeader no={no} orderedAt={orderedAt} user={user} />
-      {items.map((item) => {
+      {items.map((item, idx) => {
         // 할인 가격, 세일 상태 등 미래에 추가될 데이터를 쉽게 반영할 수 있도록 유연한 구조
         // pricing 객체 생성
         const pricing = {
@@ -28,7 +28,7 @@ const Order = ({ order }) => {
           isOnSale: item.isOnSale || false,
         };
 
-        return <OrderItem item={{ ...item, pricing }} />;
+        return <OrderItem key={idx} item={{ ...item, pricing }} />;
       })}
       <Bottom>
         <span>X{items.length} items</span>

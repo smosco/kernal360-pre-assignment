@@ -8,7 +8,7 @@ const RecentOrders = () => {
       <Title>Recent Orders</Title>
       <OrdersContainer>
         {RecentOrdersData.map((order) => {
-          return <OrderCard order={order} />;
+          return <OrderCard key={order.no} order={order} />;
         })}
       </OrdersContainer>
     </Wrapper>

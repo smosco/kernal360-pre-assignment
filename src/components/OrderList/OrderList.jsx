@@ -8,7 +8,7 @@ const OrderList = () => {
       <Title>Order List</Title>
       <OrderListContainer>
         {OrdersData.map((order) => {
-          return <Order order={order} />;
+          return <Order key={order.no} order={order} />;
         })}
       </OrderListContainer>
     </Wrapper>

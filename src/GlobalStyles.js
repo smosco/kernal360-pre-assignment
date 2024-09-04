@@ -35,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* 기본 폰트 설정 */
   body {
+    font-family: "Inter", sans-serif;
     height: 100%;
     line-height: 1.6;
   }

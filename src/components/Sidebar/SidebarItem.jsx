@@ -5,7 +5,7 @@ const SidebarItem = ({ to, label, icon, isSelected, onClick }) => {
   return (
     <MenuLink
       to={to}
-      isSelected={isSelected}
+      $isSelected={isSelected}
       onClick={() => {
         onClick(label);
       }}

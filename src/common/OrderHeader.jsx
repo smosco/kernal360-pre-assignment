@@ -21,7 +21,7 @@ const OrderDetail = styled.div`
 const OrderHeader = ({ no, orderedAt, user, titleFontSize, dateFontSize }) => {
   return (
     <OrderHeaderContainer>
-      <OrderDetail titleFontSize={titleFontSize} dateFontSize={dateFontSize}>
+      <OrderDetail $titleFontSize={titleFontSize} $dateFontSize={dateFontSize}>
         <h3>Order #{no}</h3>
         <p>{formatDate(orderedAt)}</p>
       </OrderDetail>

@@ -59,7 +59,13 @@ const Sidebar = () => {
           })}
         </SidebarItemList>
       </Wrapper>
-      <SidebarItem label='LOGOUT' icon='LogOut' />
+      <SidebarItem
+        label='LOGOUT'
+        icon='LogOut'
+        onClick={() => {
+          console.log('로그아웃 함수');
+        }}
+      />
     </SidebarContainer>
   );
 };

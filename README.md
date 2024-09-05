@@ -62,7 +62,6 @@ src/
 - **데이터 유연성**: `OrderItem`의 props 구조를 확장 가능하게 설계하여 다양한 상황에 대응할 수 있음
 - **스타일링 유연성**: `titleFontSize`와 `dateFontSize` 같은 스타일 관련 props를 받아 컴포넌트를 다양한 페이지에서 유연하게 사용 가능
 - **반복 사용 가능성**: `OrderHeader`, `Icon`, `UserProfile` 등의 컴포넌트는 여러 페이지에서 재사용 가능
-    - 단, `UserProfile`은 이미지 크기를 조절하는 props가 없어 다양한 크기를 지원할 수 있도록 수정 필요
 
 ---
 

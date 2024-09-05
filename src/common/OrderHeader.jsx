@@ -8,11 +8,17 @@ const OrderHeaderContainer = styled.div`
 `;
 
 const OrderDetail = styled.div`
-  h3 {
+  span {
+    display: block;
+  }
+
+  .order-number {
     font-size: ${(props) => props.$titleFontSize || '16px'};
     font-weight: 500;
+    color: #333;
   }
-  p {
+
+  .order-date {
     font-size: ${(props) => props.$dateFontSize || '14px'};
     color: #797b7e;
   }
@@ -22,10 +28,10 @@ const OrderHeader = ({ no, orderedAt, user, titleFontSize, dateFontSize }) => {
   return (
     <OrderHeaderContainer>
       <OrderDetail $titleFontSize={titleFontSize} $dateFontSize={dateFontSize}>
-        <h3>Order #{no}</h3>
-        <p>{formatDate(orderedAt)}</p>
+        <span className='order-number'>Order #{no}</span>
+        <span className='order-date'>{formatDate(orderedAt)}</span>
       </OrderDetail>
-      <UserProfile user={user} />
+      <UserProfile user={user} size='5rem' />
     </OrderHeaderContainer>
   );
 };

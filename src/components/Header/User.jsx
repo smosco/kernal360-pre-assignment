@@ -11,7 +11,7 @@ const User = () => {
   return (
     <UserContainer>
       <Icon name='Bell' size='20' color='#8E92BC' />
-      <UserProfile user={user} />
+      <UserProfile user={user} size='5rem' />
     </UserContainer>
   );
 };

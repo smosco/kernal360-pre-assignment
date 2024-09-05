@@ -7,8 +7,8 @@ export const Container = styled.div`
 `;
 
 export const ProfileImage = styled.img`
-  width: 5rem;
-  height: 5rem;
+  width: ${(props) => props.$sizeOfImg};
+  height: ${(props) => props.$sizeOfImg};
   border-radius: 50%;
   object-fit: cover;
 `;

@@ -31,3 +31,19 @@ export const UserContainer = styled.div`
   /* UserContainer 찌그러지지 않게 */
   flex-shrink: 0;
 `;
+
+export const IconContainer = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+`;
+
+export const NotificationBadge = styled.div`
+  position: absolute;
+  top: -2px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+`;
